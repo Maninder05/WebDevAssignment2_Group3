@@ -22,7 +22,7 @@ export default function Home() {
   return (
     <div>
       <Navbar />
-      <div style={{backgroundColor: 'grey', color:'black', height:'560px'}}>
+      <div style={{backgroundColor: 'white', color:'black', height:'560px'}}>
       <main style={styles.container}>
         <h2 style={styles.title}>Student List  Display</h2>
         <StudentList students={students} />

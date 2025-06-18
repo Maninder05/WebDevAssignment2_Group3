@@ -1,11 +1,14 @@
 /** @type {import('next').NextConfig} */
+const isProd = process.env.NODE_ENV === 'production';
+
 const nextConfig = {
-  output: 'export', // enables static export via build
-  trailingSlash: true, // important for GitHub Pages
-  basePath: '/WebDevAssignment2_Group3', // match repo name
+  reactStrictMode: true,
+  output: 'export',
+  basePath: isProd ? '/WebDevAssignment2_Group3' : '',
+  assetPrefix: isProd ? '/WebDevAssignment2_Group3/' : '',
   images: {
-    unoptimized: true, // required if you're using images
+    unoptimized: true,
   },
 };
 
-module.exports = nextConfig;
+export default nextConfig;

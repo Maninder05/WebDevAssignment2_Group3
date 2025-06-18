@@ -98,7 +98,7 @@ export default function StudentForm({ onAdd }) {
         {errors.grade && <span style={{ color: 'red' }}>{errors.grade}</span>}
       </div>
       <center>
-        <button type="submit" style={{ marginTop: '1rem', padding: '10px 20px',backgroundColor: '#155e75', color: 'black',border: 'none',borderRadius: '6px',cursor: 'pointer',fontWeight: '600',fontSize: '14px',  }}>Add Student</button>
+        <button type="submit" style={{ marginTop: '1rem', padding: '10px 20px',backgroundColor: '#155e75', color: 'white',border: 'none',borderRadius: '6px',cursor: 'pointer',fontWeight: '600',fontSize: '14px',  }}>Add Student</button>
       </center>
     </form>
   );
