@@ -9,12 +9,14 @@ import studentsData from '../data/students.json';
 export default function Home() {
   const [students, setStudents] = useState([]);
  
-  useEffect(() => {
-    setStudents(studentsData);
-  }, []);
-
+ useEffect(() => {
+  fetch('/students.json')
+    .then(res => res.json())
+    .then(data => setStudents(data))
+    .catch(err => console.error('Failed to load the students:', err));
+}, []);
   const AddStudent = (student) => {
-    setStudents(prevStudents => [...prevStudents, student]);
+    setStudents([...students, student]);
   };
  
   return (
