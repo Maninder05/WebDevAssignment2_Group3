@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
+  "homepage": "https://Maninder05.github.io/WebDevAssignment2_Group3",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
+    "deploy": "npm run build && gh-pages -d out",
     "lint": "next lint"
   },
   "dependencies": {
@@ -25,6 +27,7 @@
     "concurrently": "^9.1.2",
     "eslint": "^9",
     "eslint-config-next": "15.2.0",
+    "gh-pages": "^6.3.0",
     "tailwindcss": "^4"
   },
   "browser": {
