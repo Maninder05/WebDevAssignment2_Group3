@@ -9,7 +9,7 @@ export default function Home() {
   const [students, setStudents] = useState([]);
  
   useEffect(() => {
-    fetch('/students.json')
+    fetch('/WebDevAssignment2_Group3/student.json')
       .then(res => res.json())
       .then(data => setStudents(data))
       .catch(err => console.error('Failed to load the students:', err));
