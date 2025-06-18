@@ -4,19 +4,17 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import StudentList from '../components/StudentList';
 import StudentForm from '../components/StudentForm';
+import studentsData from '../data/students.json';
  
 export default function Home() {
   const [students, setStudents] = useState([]);
  
   useEffect(() => {
-    fetch('/students.json')
-      .then(res => res.json())
-      .then(data => setStudents(data))
-      .catch(err => console.error('Failed to load the students:', err));
+    setStudents(studentsData);
   }, []);
- 
+
   const AddStudent = (student) => {
-    setStudents([...students, student]);
+    setStudents(prevStudents => [...prevStudents, student]);
   };
  
   return (
